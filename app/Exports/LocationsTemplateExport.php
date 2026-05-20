@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Exports;
+
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Illuminate\Support\Collection;
+
+class LocationsTemplateExport implements FromCollection, WithHeadings, ShouldAutoSize
+{
+    public function headings(): array
+    {
+        return [
+            'name',
+            'name_ar',
+            'latitude',
+            'longitude',
+            'address',
+            'address_ar',
+            'phone',
+            'description',
+            'description_ar',
+            'features',
+            'features_ar',
+            'website',
+            'email',
+            'rating',
+            'governorate',
+            'governorate_ar',
+            'tourism_type',
+            'tourism_type_ar',
+            'location_types',
+            'categories',
+        ];
+    }
+
+    public function collection()
+    {
+        return new Collection([
+            [
+                'Masmak Fort',
+                'قصر المصمك',
+                24.6338,
+                46.7150,
+                'Ad Dirah - Riyadh',
+                'حي الديرة - الرياض',
+                '+966114112222',
+                'Historic fort in Riyadh',
+                'قلعة تاريخية في الرياض',
+                'Historic fort',
+                'قلعة تاريخية',
+                'https://example.com/masmak',
+                'info@example.com',
+                4.7,
+                'Riyadh',
+                'الرياض',
+                'Cultural',
+                'ثقافي',
+                'Fort,Museum',
+                'Historic,Heritage',
+            ],
+        ]);
+    }
+}
+

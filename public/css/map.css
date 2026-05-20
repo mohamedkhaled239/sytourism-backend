@@ -1,0 +1,105 @@
+/* أنماط الخريطة */
+#map {
+    height: 700px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    z-index: 1; /* تأكيد أن الخريطة لها z-index */
+}
+
+#location-map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.location-popup {
+    max-width: 300px;
+    padding: 5px;
+}
+
+.location-popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-popup h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.location-popup .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.location-popup .btn {
+    margin-top: 10px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.location-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.location-details {
+    margin-bottom: 30px;
+}
+
+/* أنماط العلامات المخصصة */
+.custom-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-marker div {
+    transition: all 0.3s ease;
+}
+
+.custom-marker div:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.location-details h4 {
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.location-details .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.info-row {
+    margin-bottom: 10px;
+}
+
+.info-row strong {
+    display: inline-block;
+    min-width: 120px;
+}

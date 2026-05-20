@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معاينة قوالب الإيميل</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .demo-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .email-preview {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(0.8);
+            transform-origin: top;
+        }
+        .preview-label {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .verification-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .login-header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .reset-header {
+            background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .email-content {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .code-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .verification-code {
+            border: 2px dashed #007bff;
+        }
+        .login-code {
+            border: 2px dashed #28a745;
+        }
+        .reset-code {
+            border: 2px dashed #dc3545;
+        }
+        .code {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .verification-code .code {
+            color: #007bff;
+        }
+        .login-code .code {
+            color: #28a745;
+        }
+        .reset-code .code {
+            color: #dc3545;
+        }
+        .copy-button {
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .verification-button {
+            background-color: #007bff;
+        }
+        .login-button {
+            background-color: #28a745;
+        }
+        .reset-button {
+            background-color: #dc3545;
+        }
+        .features-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1 class="demo-title">🎨 معاينة قوالب الإيميل المحسنة</h1>
+        
+        <div class="email-grid">
+            <!-- رمز التحقق -->
+            <div class="email-preview">
+                <div class="preview-label">رمز التحقق من البريد الإلكتروني</div>
+                <div class="verification-header">
+                    <h2>🔐 رمز التحقق</h2>
+                    <p>مرحباً بك في منصة سياحة</p>
+                </div>
+                <div class="email-content">
+                    <h3>رمز التحقق الخاص بك</h3>
+                    <div class="code-container verification-code">
+                        <div class="code">ABC123</div>
+                        <button class="copy-button verification-button">📋 نسخ الرمز</button>
+                    </div>
+                    <div style="background: #fff3cd; padding: 10px; border-radius: 5px; font-size: 12px;">
+                        ⚠️ هذا الرمز صالح لمرة واحدة فقط
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTP تسجيل الدخول -->
+            <div class="email-preview">
+                <div class="preview-label">رمز تسجيل الدخول (OTP)</div>
+                <div class="login-header">
+                    <h2>🔑 رمز تسجيل الدخول</h2>
+                    <p>مرحباً بك مرة أخرى</p>
+                </div>
+                <div class="email-content">
+                    <h3>رمز تسجيل الدخول</h3>
+                    <div class="code-container login-code">
+                        <div class="code">123456</div>
+                        <button class="copy-button login-button">📋 نسخ الرمز</button>
+                    </div>
+                    <div style="background: #f8d7da; padding: 10px; border-radius: 5px; font-size: 12px;">
+                        ⏰ صالح لمدة 10 دقائق فقط
+                    </div>
+                </div>
+            </div>
+
+            <!-- إعادة تعيين كلمة المرور -->
+            <div class="email-preview">
+                <div class="preview-label">إعادة تعيين كلمة المرور</div>
+                <div class="reset-header">
+                    <h2>🔄 إعادة تعيين كلمة المرور</h2>
+                    <p>طلب إعادة تعيين</p>
+                </div>
+                <div class="email-content">
+                    <h3>رمز إعادة التعيين</h3>
+                    <div class="code-container reset-code">
+                        <div class="code">789012</div>
+                        <button class="copy-button reset-button">📋 نسخ الرمز</button>
+                    </div>
+                    <div style="background: #fff3cd; padding: 10px; border-radius: 5px; font-size: 12px;">
+                        ⏰ صالح لمدة ساعتين فقط
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2 style="text-align: center; color: #333;">✨ الميزات الجديدة</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <h3>نسخ بضغطة واحدة</h3>
+                    <p>زر تفاعلي لنسخ الكود مباشرة للحافظة</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3>تصميم احترافي</h3>
+                    <p>ألوان متدرجة وتصميم عصري متجاوب</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>أمان محسن</h3>
+                    <p>تحذيرات واضحة ومعلومات الصلاحية</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>متجاوب</h3>
+                    <p>يعمل بشكل مثالي على جميع الأجهزة</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3>دعم العربية</h3>
+                    <p>تصميم RTL كامل للغة العربية</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>سرعة التحميل</h3>
+                    <p>كود محسن وسريع التحميل</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // محاكاة وظيفة النسخ للمعاينة
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const codeElement = this.parentElement.querySelector('.code');
+                const code = codeElement.textContent;
+                
+                // محاولة النسخ
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(code).then(() => {
+                        this.textContent = '✅ تم النسخ!';
+                        setTimeout(() => {
+                            this.textContent = '📋 نسخ الرمز';
+                        }, 2000);
+                    });
+                } else {
+                    this.textContent = '✅ تم النسخ!';
+                    setTimeout(() => {
+                        this.textContent = '📋 نسخ الرمز';
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
