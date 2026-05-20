@@ -9,7 +9,12 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql gd
+    && RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    zip \
+    unzip
+
+RUN docker-php-ext-install zip gd pdo pdo_mysql
 
 # تفعيل موديل إعادة التوجيه في Apache وموقع الـ Public
 RUN a2enmod rewrite
